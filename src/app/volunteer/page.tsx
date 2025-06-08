@@ -8,11 +8,6 @@ import {
   FiUsers, 
   FiCalendar, 
   FiClock, 
-  FiMapPin, 
-  FiMail,
-  FiPhone,
-  FiCheckCircle,
-  FiStar,
   FiSmile,
   FiAward,
   FiGift,
@@ -328,7 +323,7 @@ const VolunteerPage = () => {
               How to <span className="text-pink">Get Started</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Getting involved is easy! Here's our simple 4-step process to become a volunteer.
+              Getting involved is easy! Here&apos;s our simple 4-step process to become a volunteer.
             </p>
           </motion.div>
 
@@ -392,7 +387,7 @@ const VolunteerPage = () => {
               {
                 name: 'David Chen',
                 role: 'Program Coordinator',
-                quote: 'I love the leadership opportunities here. I\'ve grown so much personally while helping create programs that truly impact people\'s lives.',
+                quote: 'I love the leadership opportunities here. I&apos;ve grown so much personally while helping create programs that truly impact people&apos;s lives.',
                 months: 14
               },
               {

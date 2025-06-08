@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
-import { FiArrowRight, FiHeart, FiUsers, FiCalendar, FiChevronLeft, FiChevronRight, FiGift, FiPlay } from 'react-icons/fi';
+import { FiArrowRight, FiHeart, FiUsers, FiChevronLeft, FiChevronRight, FiPlay } from 'react-icons/fi';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,9 +31,9 @@ const HomePage = () => {
     },
   ];
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
-  };
+  }, [galleryImages.length]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);

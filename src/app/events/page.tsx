@@ -331,7 +331,7 @@ const EventsPage = () => {
             <motion.div variants={fadeInUp} className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>Past Event Highlights</h2>
               <p className="text-base text-gray-600 max-w-3xl mx-auto">
-                Look back at some of the amazing moments we've shared together as a community
+                Look back at some of the amazing moments we&apos;ve shared together as a community
               </p>
             </motion.div>
 

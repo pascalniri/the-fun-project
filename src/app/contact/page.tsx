@@ -296,7 +296,7 @@ const ContactPage = () => {
                       <div>
                         <h4 className="font-semibold mb-2 text-base" style={{ color: '#1c1c1c' }}>Share Ideas</h4>
                         <p className="text-base text-gray-600">
-                          Have a great idea for a community event or program? We'd love to hear it!
+                          Have a great idea for a community event or program? We&apos;d love to hear it!
                         </p>
                       </div>
                     </div>

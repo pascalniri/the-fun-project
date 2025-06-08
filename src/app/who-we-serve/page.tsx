@@ -6,8 +6,7 @@ import {
   FiUsers, 
   FiHeart, 
   FiShield, 
-  FiTrendingUp, 
-  FiAward 
+  FiTrendingUp
 } from 'react-icons/fi';
 
 const WhoWeServePage = () => {
@@ -387,14 +386,14 @@ const WhoWeServePage = () => {
                 <div className="space-y-4">
                   <div className="p-4 rounded-lg" style={{ backgroundColor: '#eeeeee' }}>
                     <p className="text-base italic" style={{ color: '#1c1c1c' }}>
-                      "The Fun Project listens to what we actually need, not what they think we need."
+                      &quot;The Fun Project listens to what we actually need, not what they think we need.&quot;
                     </p>
                     <div className="text-sm mt-2" style={{ color: '#48b0ad' }}>- Community Member</div>
                   </div>
                   
                   <div className="p-4 rounded-lg" style={{ backgroundColor: '#eeeeee' }}>
                     <p className="text-base italic" style={{ color: '#1c1c1c' }}>
-                      "They made sure to include everyone, especially those who usually get overlooked."
+                      &quot;They made sure to include everyone, especially those who usually get overlooked.&quot;
                     </p>
                     <div className="text-sm mt-2" style={{ color: '#cb338a' }}>- Local Resident</div>
                   </div>
@@ -419,8 +418,8 @@ const WhoWeServePage = () => {
               Join Our Community
             </h2>
             <p className="text-base text-gray-700 mb-8">
-              Whether you're looking for connection, want to give back, or simply want to have fun with your neighbors, 
-              there's a place for you in The Fun Project.
+              Whether you&apos;re looking for connection, want to give back, or simply want to have fun with your neighbors, 
+              there&apos;s a place for you in The Fun Project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a

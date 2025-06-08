@@ -206,7 +206,7 @@ const DonatePage = () => {
                 </button>
                 
                 <p className="text-sm text-gray-500 mt-4 text-center">
-                  Donations are processed securely. You'll receive a tax-deductible receipt via email.
+                  Donations are processed securely. You&apos;ll receive a tax-deductible receipt via email.
                 </p>
               </motion.div>
 
