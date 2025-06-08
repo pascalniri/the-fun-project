@@ -3,13 +3,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FiHeart, 
   FiUsers, 
-  FiHome, 
-  FiStar,
-  FiCalendar,
-  FiArrowRight,
-  FiMapPin
+  FiHeart, 
+  FiShield, 
+  FiTrendingUp, 
+  FiAward 
 } from 'react-icons/fi';
 
 const WhoWeServePage = () => {
@@ -234,7 +232,7 @@ const WhoWeServePage = () => {
                 Our Community Impact
               </h2>
               <p className="text-base text-gray-600 max-w-3xl mx-auto">
-                Numbers that reflect the positive change we're creating together
+                Numbers that reflect the positive change we&apos;re creating together
               </p>
             </motion.div>
 
@@ -313,7 +311,7 @@ const WhoWeServePage = () => {
                       <span className="text-sm font-medium" style={{ color: '#cb338a' }}>
                         {story.timeframe}
                       </span>
-                      <FiArrowRight size={16} style={{ color: '#48b0ad' }} />
+                      <FiTrendingUp size={16} style={{ color: '#48b0ad' }} />
                     </div>
                   </div>
                 </motion.div>
@@ -370,7 +368,7 @@ const WhoWeServePage = () => {
                   
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style={{ backgroundColor: '#e3cf12' }}>
-                      <FiMapPin size={16} className="text-white" />
+                      <FiShield size={16} className="text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-2 text-base" style={{ color: '#1c1c1c' }}>Local Partnerships</h3>

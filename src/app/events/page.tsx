@@ -2,7 +2,14 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiCalendar, FiMapPin, FiClock, FiUsers, FiHeart, FiArrowRight, FiFilter } from 'react-icons/fi';
+import { 
+  FiCalendar, 
+  FiMapPin, 
+  FiClock, 
+  FiUsers, 
+  FiHeart, 
+  FiFilter 
+} from 'react-icons/fi';
 
 const EventsPage = () => {
   const [filter, setFilter] = useState('all');
@@ -367,7 +374,7 @@ const EventsPage = () => {
               Host Your Own Event
             </h2>
             <p className="text-base text-gray-700 mb-8">
-              Have an idea for a community event? We'd love to help you bring it to life and connect with your neighbors.
+              Have an idea for a community event? We&apos;d love to help you bring it to life and connect with your neighbors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a

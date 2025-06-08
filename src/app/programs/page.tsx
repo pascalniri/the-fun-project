@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiHeart, FiUsers, FiCalendar, FiClock, FiMapPin, FiArrowRight } from 'react-icons/fi';
+import { FiHeart, FiUsers, FiCalendar, FiMapPin } from 'react-icons/fi';
 
 const ProgramsPage = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -301,7 +301,7 @@ const ProgramsPage = () => {
               <motion.div variants={fadeInUp} className="text-center py-16">
                 <h3 className="text-2xl font-bold mb-4" style={{ color: '#1c1c1c' }}>No programs in this category</h3>
                 <p className="text-base text-gray-600 mb-8">
-                  We're always developing new programs. Check back soon or suggest an idea!
+                  We&apos;re always developing new programs. Check back soon or suggest an idea!
                 </p>
                 <button
                   onClick={() => setActiveTab('all')}

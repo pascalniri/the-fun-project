@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiCalendar, FiUser, FiTag, FiArrowRight, FiSearch } from 'react-icons/fi';
+import { FiCalendar, FiUser, FiArrowRight, FiSearch } from 'react-icons/fi';
 
 const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -195,7 +195,7 @@ const BlogPage = () => {
           >
             {filteredPosts.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map((post, index) => (
+                {filteredPosts.map((post) => (
                   <motion.article
                     key={post.id}
                     variants={fadeInUp}

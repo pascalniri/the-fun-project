@@ -7,10 +7,14 @@ import {
   FiHeart, 
   FiUsers, 
   FiCalendar, 
-  FiAward,
-  FiClock,
+  FiClock, 
+  FiMapPin, 
+  FiMail,
+  FiPhone,
+  FiCheckCircle,
+  FiStar,
   FiSmile,
-  FiTarget,
+  FiAward,
   FiGift,
   FiArrowRight
 } from 'react-icons/fi';
@@ -147,8 +151,8 @@ const VolunteerPage = () => {
               Join Our <span style={{ color: '#e3cf12' }}>Volunteer</span> Family
             </h1>
             <p className="text-base opacity-90 leading-relaxed mb-8">
-              Be part of a movement that's bringing joy and building stronger communities. 
-              Your time, skills, and passion can make a real difference in people's lives.
+              Be part of a movement that&apos;s bringing joy and building stronger communities. 
+              Your time, skills, and passion can make a real difference in people&apos;s lives.
             </p>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -182,7 +186,7 @@ const VolunteerPage = () => {
               Why <span className="text-teal">Volunteer</span> With Us?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Volunteering shouldn't feel like work – it should feel like being part of something amazing
+              Volunteering shouldn&apos;t feel like work – it should feel like being part of something amazing
             </p>
           </motion.div>
 
@@ -407,7 +411,7 @@ const VolunteerPage = () => {
                 className="bg-white p-8 rounded-2xl shadow-lg"
               >
                 <p className="text-gray-600 italic leading-relaxed mb-6">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
                 <div className="flex items-center justify-between">
                   <div>

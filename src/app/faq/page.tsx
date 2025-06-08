@@ -268,7 +268,7 @@ const FAQPage = () => {
             </motion.div>
 
             <div className="space-y-4">
-              {faqs[activeCategory as keyof typeof faqs].map((faq, index) => (
+              {faqs[activeCategory as keyof typeof faqs].map((faq) => (
                 <motion.div
                   key={faq.id}
                   variants={fadeInUp}
@@ -330,7 +330,7 @@ const FAQPage = () => {
                 Still Have Questions?
               </h2>
               <p className="text-base text-gray-600 mb-8">
-                We're here to help! Reach out to us and we'll get back to you quickly.
+                We&apos;re here to help! Reach out to us and we&apos;ll get back to you quickly.
               </p>
             </div>
 

@@ -4,47 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  FiHeart, 
-  FiUsers, 
-  FiCalendar, 
-  FiGift,
-  FiArrowRight,
-  FiPlay,
-  FiChevronLeft,
-  FiChevronRight
-} from 'react-icons/fi';
+import { FiArrowRight, FiHeart, FiUsers, FiCalendar, FiChevronLeft, FiChevronRight, FiGift, FiPlay } from 'react-icons/fi';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Animated counter hook
-  const useCounter = (end: number, duration: number = 2000) => {
-    const [count, setCount] = useState(0);
-    const [hasStarted, setHasStarted] = useState(false);
-
-    useEffect(() => {
-      if (hasStarted) {
-        let startTime: number;
-        const animate = (timestamp: number) => {
-          if (!startTime) startTime = timestamp;
-          const progress = Math.min((timestamp - startTime) / duration, 1);
-          setCount(Math.floor(progress * end));
-          if (progress < 1) requestAnimationFrame(animate);
-        };
-        requestAnimationFrame(animate);
-      }
-    }, [hasStarted, end, duration]);
-
-    return { count, startCounter: () => setHasStarted(true) };
-  };
-
-  const stats = [
-    { icon: FiUsers, label: 'People Served', value: 2500, suffix: '+' },
-    { icon: FiCalendar, label: 'Events Hosted', value: 150, suffix: '+' },
-    { icon: FiHeart, label: 'Volunteer Hours', value: 5000, suffix: '+' },
-    { icon: FiGift, label: 'Lives Impacted', value: 10000, suffix: '+' },
-  ];
 
   const galleryImages = [
     {
@@ -80,7 +43,7 @@ const HomePage = () => {
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [nextSlide]);
 
   return (
     <div className="min-h-screen">
@@ -225,9 +188,8 @@ const HomePage = () => {
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1c1c1c' }}>
                 See the <span style={{ color: '#48b0ad' }}>Joy</span> in Action
               </h2>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Discover the impact we're making in our community through fun, engaging activities 
-                that bring people together and create lasting memories.
+              <p className="text-base text-gray-600 max-w-3xl mx-auto">
+                Discover the impact we&apos;re making in our community through fun, engaging activities
               </p>
             </div>
           </motion.div>
@@ -316,7 +278,7 @@ const HomePage = () => {
                 Who We <span style={{ color: '#48b0ad' }}>Are</span>
               </h2>
               <p className="text-base text-gray-600 mb-6 leading-relaxed">
-                The Fun Project is more than just an organization – we're a movement dedicated to 
+                The Fun Project is more than just an organization – we&apos;re a movement dedicated to 
                 bringing joy and building stronger communities through the power of fun and connection.
               </p>
               <p className="text-base text-gray-600 mb-8 leading-relaxed">
@@ -353,7 +315,7 @@ const HomePage = () => {
                       Watch Our Story
                     </h3>
                     <p className="text-gray-600 text-base">
-                      See how we're transforming communities through joy and connection
+                      See how we&apos;re transforming communities through joy and connection
                     </p>
                   </div>
                 </div>

@@ -47,12 +47,12 @@ const DonatePage = () => {
   const testimonials = [
     {
       name: "Sarah M.",
-      quote: "The Fun Project brought my family closer to our neighbors. It's amazing how much joy these events bring!",
+      quote: "The Fun Project brought my family closer to our neighbors. It&apos;s amazing how much joy these events bring!",
       location: "Local Resident"
     },
     {
       name: "David L.",
-      quote: "As a volunteer, I've seen firsthand how donations make these incredible community connections possible.",
+      quote: "As a volunteer, I&apos;ve seen firsthand how donations make these incredible community connections possible.",
       location: "Volunteer"
     },
     {
@@ -312,7 +312,7 @@ const DonatePage = () => {
                     ))}
                   </div>
                   <p className="text-base text-gray-600 mb-4 italic">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
                   <div>
                     <div className="font-semibold text-base" style={{ color: '#1c1c1c' }}>{testimonial.name}</div>

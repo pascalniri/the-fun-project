@@ -109,8 +109,8 @@ const ContactPage = () => {
               Get in Touch
             </h1>
             <p className="text-base opacity-90">
-              We'd love to hear from you! Whether you have questions, ideas, or want to get involved, 
-              we're here to help and connect.
+              We&apos;d love to hear from you! Whether you have questions, ideas, or want to get involved, 
+              we&apos;re here to help and connect.
             </p>
           </motion.div>
         </div>
@@ -129,7 +129,7 @@ const ContactPage = () => {
             <motion.div variants={fadeInUp} className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>Ways to Reach Us</h2>
               <p className="text-base text-gray-600 max-w-3xl mx-auto">
-                Choose the method that works best for you - we're always ready to connect
+                Choose the method that works best for you - we&apos;re always ready to connect
               </p>
             </motion.div>
 
@@ -308,7 +308,7 @@ const ContactPage = () => {
                       <div>
                         <h4 className="font-semibold mb-2 text-base" style={{ color: '#1c1c1c' }}>Ask Questions</h4>
                         <p className="text-base text-gray-600">
-                          Whether it's about our programs, events, or how to get involved - we're here to help.
+                          Whether it&apos;s about our programs, events, or how to get involved - we&apos;re here to help.
                         </p>
                       </div>
                     </div>
@@ -352,7 +352,7 @@ const ContactPage = () => {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>Find Us</h2>
               <p className="text-base text-gray-600">
-                We're located in the heart of the community we serve
+                We&apos;re located in the heart of the community we serve
               </p>
             </div>
             

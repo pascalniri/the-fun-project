@@ -135,7 +135,7 @@ const AboutPage = () => {
                     and support those in need.
                   </p>
                   <p className="text-base text-gray-600">
-                    As a 501(c)(3) pending nonprofit organization, we're committed to transparency, 
+                    As a 501(c)(3) pending nonprofit organization, we&apos;re committed to transparency, 
                     community involvement, and making every dollar count toward our mission of 
                     spreading joy and building stronger communities.
                   </p>
