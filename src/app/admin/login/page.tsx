@@ -32,7 +32,7 @@ const AdminLoginPage = () => {
 
       if (data.success) {
         // Store token in localStorage
-        localStorage.setItem('admin_token', data.token);
+        localStorage.setItem('adminToken', data.token);
         // Redirect to admin dashboard
         router.push('/admin/dashboard');
       } else {

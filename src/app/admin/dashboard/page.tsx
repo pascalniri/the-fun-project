@@ -3,10 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FiUsers, FiTrendingUp, FiHeart, FiCalendar, FiSettings, 
-  FiLogOut, FiMenu, FiX, FiHome, FiBarChart, FiMessageSquare,
-  FiDollarSign, FiStar, FiActivity, FiMail, FiPhone, FiMapPin,
-  FiEdit, FiTrash2, FiPlus, FiChevronDown, FiDownload
+  FiUsers, FiCalendar, FiDollarSign, FiActivity, FiMapPin
 } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
 import AdminLayout from '../../../components/AdminLayout';
@@ -22,7 +19,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     // Check authentication
-    const token = localStorage.getItem('admin_token');
+    const token = localStorage.getItem('adminToken');
     if (!token) {
       router.push('/admin/login');
       return;
