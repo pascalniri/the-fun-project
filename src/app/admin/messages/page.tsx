@@ -33,17 +33,20 @@ interface Message {
 
 interface MessagesResponse {
   success: boolean;
-  data: {
-    messages: Message[];
-    total: number;
-    page: number;
-    limit: number;
+  data: Message[];
+  pagination: {
+    currentPage: number;
     totalPages: number;
-    stats: {
-      total: number;
-      unread: number;
-      archived: number;
-    };
+    totalItems: number;
+    itemsPerPage: number;
+    hasNextPage: boolean;
+    hasPrevPage: boolean;
+  };
+  statistics: {
+    totalMessages: number;
+    unreadCount: number;
+    archivedCount: number;
+    filteredCount: number;
   };
 }
 
@@ -106,17 +109,21 @@ const AdminMessagesPage = () => {
         const result: MessagesResponse = await response.json();
         console.log('Messages API response:', result);
         
-        setMessages(result.data.messages || []);
-        setTotalMessages(result.data.total || 0);
-        setTotalPages(result.data.totalPages || 1);
+        setMessages(result.data || []);
+        setTotalMessages(result.statistics.totalMessages || 0);
+        setTotalPages(result.pagination.totalPages || 1);
         
         // Ensure stats has default values if not provided by API
-        if (result.data.stats) {
-          setStats(result.data.stats);
+        if (result.statistics) {
+          setStats({
+            total: result.statistics.totalMessages,
+            unread: result.statistics.unreadCount,
+            archived: result.statistics.archivedCount
+          });
         } else {
           console.warn('No stats provided by API, using defaults');
           setStats({
-            total: result.data.total || 0,
+            total: result.pagination.totalItems || 0,
             unread: 0,
             archived: 0
           });
