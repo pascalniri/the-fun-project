@@ -183,11 +183,11 @@ const AdminLoginPage = () => {
           </form>
 
           {/* Demo Credentials */}
-          <div className="mt-8 p-4 bg-white/5 rounded-xl border border-white/10">
+          {/* <div className="mt-8 p-4 bg-white/5 rounded-xl border border-white/10">
             <h3 className="text-white/80 text-sm font-medium mb-2">Demo Credentials:</h3>
             <p className="text-white/60 text-xs">Email: admin@thefunproject.org</p>
             <p className="text-white/60 text-xs">Password: thefunprojectAdmin@123</p>
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </div>
