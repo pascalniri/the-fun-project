@@ -58,7 +58,16 @@ const AdminDashboard = () => {
     { id: 3, title: 'Food Drive', date: '2024-02-08', attendees: 30, location: 'Community Center' }
   ];
 
-  if (!user) return null;
+  if (!user) {
+    console.log('⏳ User not set yet, showing loading...');
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-white text-xl">Loading dashboard...</div>
+      </div>
+    );
+  }
+
+  console.log('🎨 Rendering dashboard with user:', user);
 
   return (
     <AdminLayout title="Dashboard Overview">

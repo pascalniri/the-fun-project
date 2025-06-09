@@ -35,7 +35,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title }) => {
 
   useEffect(() => {
     // Check authentication
-    const token = localStorage.getItem('admin_token');
+    const token = localStorage.getItem('adminToken');
     if (!token) {
       router.push('/admin/login');
       return;
@@ -46,7 +46,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title }) => {
   }, [router]);
 
   const handleLogout = () => {
-    localStorage.removeItem('admin_token');
+    localStorage.removeItem('adminToken');
     router.push('/admin/login');
   };
 
