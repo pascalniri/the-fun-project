@@ -104,12 +104,27 @@ const AdminMessagesPage = () => {
 
       if (response.ok) {
         const result: MessagesResponse = await response.json();
-        setMessages(result.data.messages);
-        setTotalMessages(result.data.total);
-        setTotalPages(result.data.totalPages);
-        setStats(result.data.stats);
+        console.log('Messages API response:', result);
+        
+        setMessages(result.data.messages || []);
+        setTotalMessages(result.data.total || 0);
+        setTotalPages(result.data.totalPages || 1);
+        
+        // Ensure stats has default values if not provided by API
+        if (result.data.stats) {
+          setStats(result.data.stats);
+        } else {
+          console.warn('No stats provided by API, using defaults');
+          setStats({
+            total: result.data.total || 0,
+            unread: 0,
+            archived: 0
+          });
+        }
       } else {
-        console.error('Failed to fetch messages');
+        console.error('Failed to fetch messages, status:', response.status);
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
       }
     } catch (error) {
       console.error('Error fetching messages:', error);
@@ -256,7 +271,7 @@ const AdminMessagesPage = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-white/70">Unread</p>
-                <p className="text-2xl font-bold text-white">{stats.unread}</p>
+                <p className="text-2xl font-bold text-white">{stats?.unread || 0}</p>
               </div>
             </div>
           </motion.div>
@@ -273,7 +288,7 @@ const AdminMessagesPage = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-white/70">Archived</p>
-                <p className="text-2xl font-bold text-white">{stats.archived}</p>
+                <p className="text-2xl font-bold text-white">{stats?.archived || 0}</p>
               </div>
             </div>
           </motion.div>
@@ -290,7 +305,7 @@ const AdminMessagesPage = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-white/70">Filtered</p>
-                <p className="text-2xl font-bold text-white">{stats.total - stats.unread - stats.archived}</p>
+                <p className="text-2xl font-bold text-white">{(stats?.total || 0) - (stats?.unread || 0) - (stats?.archived || 0)}</p>
               </div>
             </div>
           </motion.div>
