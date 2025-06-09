@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import { 
   FiMail, 
   FiSearch, 
@@ -11,7 +11,6 @@ import {
   FiRefreshCw,
   FiUser,
   FiCalendar,
-  FiTag,
   FiEye,
   FiChevronLeft,
   FiChevronRight
@@ -82,7 +81,7 @@ const AdminMessagesPage = () => {
 
   const messagesPerPage = 10;
 
-  const fetchMessages = async () => {
+  const fetchMessages = useCallback(async () => {
     setLoading(true);
     try {
       const params = new URLSearchParams();
@@ -117,7 +116,11 @@ const AdminMessagesPage = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [currentPage, searchTerm, typeFilter, statusFilter]);
+
+  useEffect(() => {
+    fetchMessages();
+  }, [fetchMessages]);
 
   const markAsRead = async (messageId: string, isRead: boolean) => {
     try {
@@ -212,10 +215,6 @@ const AdminMessagesPage = () => {
     };
     return colors[type as keyof typeof colors] || 'bg-gray-500/20 text-gray-300 border border-gray-400/30';
   };
-
-  useEffect(() => {
-    fetchMessages();
-  }, [currentPage, typeFilter, statusFilter, searchTerm]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();

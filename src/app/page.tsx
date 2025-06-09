@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiArrowRight, FiHeart, FiUsers, FiChevronLeft, FiChevronRight, FiPlay, FiStar, FiTrendingUp } from 'react-icons/fi';
+import { FiArrowRight, FiHeart, FiUsers, FiChevronLeft, FiChevronRight, FiStar, FiTrendingUp } from 'react-icons/fi';
 import PublicLayout from '../components/PublicLayout';
 
 const HomePage = () => {

@@ -38,7 +38,7 @@ const AdminLoginPage = () => {
       } else {
         setError(data.message || 'Login failed');
       }
-    } catch (error) {
+    } catch {
       setError('Connection error. Please check if the backend server is running.');
     } finally {
       setIsLoading(false);
