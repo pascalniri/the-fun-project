@@ -13,6 +13,7 @@ import {
   FiMail,
   FiPhone
 } from 'react-icons/fi';
+import PublicLayout from '../../components/PublicLayout';
 
 const FAQPage = () => {
   const [activeCategory, setActiveCategory] = useState('general');
@@ -183,236 +184,238 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative text-white py-20 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
-            }}
-          />
-          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(72, 176, 173, 0.8)' }}></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-base opacity-90">
-              Find answers to common questions about The Fun Project, our programs, and how you can get involved in building a stronger community.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAQ Categories */}
-      <section className="py-16" style={{ backgroundColor: '#eeeeee' }}>
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-4" style={{ color: '#1c1c1c' }}>Browse by Category</h2>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 text-base ${
-                    activeCategory === category.id
-                      ? 'text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:shadow-md'
-                  }`}
-                  style={{
-                    backgroundColor: activeCategory === category.id ? '#cb338a' : 'white'
-                  }}
-                >
-                  {category.icon}
-                  <span>{category.name}</span>
-                </button>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAQ Content */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="max-w-4xl mx-auto"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            <motion.div variants={fadeInUp} className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>
-                {categories.find(c => c.id === activeCategory)?.name} Questions
-              </h2>
-              <p className="text-base text-gray-600">
-                Click on any question to see the answer
+    <PublicLayout>
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="relative text-white py-20 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="w-full h-full bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+              }}
+            />
+            <div className="absolute inset-0" style={{ backgroundColor: 'rgba(72, 176, 173, 0.8)' }}></div>
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              className="text-center max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Frequently Asked Questions
+              </h1>
+              <p className="text-base opacity-90">
+                Find answers to common questions about The Fun Project, our programs, and how you can get involved in building a stronger community.
               </p>
             </motion.div>
+          </div>
+        </section>
 
-            <div className="space-y-4">
-              {faqs[activeCategory as keyof typeof faqs].map((faq) => (
-                <motion.div
-                  key={faq.id}
-                  variants={fadeInUp}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden"
-                >
+        {/* FAQ Categories */}
+        <section className="py-16" style={{ backgroundColor: '#eeeeee' }}>
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="text-center mb-8">
+                <h2 className="text-2xl font-bold mb-4" style={{ color: '#1c1c1c' }}>Browse by Category</h2>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4">
+                {categories.map((category) => (
                   <button
-                    onClick={() => toggleFAQ(faq.id)}
-                    className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                    key={category.id}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 text-base ${
+                      activeCategory === category.id
+                        ? 'text-white shadow-lg'
+                        : 'bg-white text-gray-700 hover:shadow-md'
+                    }`}
+                    style={{
+                      backgroundColor: activeCategory === category.id ? '#cb338a' : 'white'
+                    }}
                   >
-                    <h3 className="text-lg font-semibold pr-4" style={{ color: '#1c1c1c' }}>
-                      {faq.question}
-                    </h3>
-                    <div className="flex-shrink-0">
-                      {openFAQ === faq.id ? (
-                        <FiMinus size={20} style={{ color: '#cb338a' }} />
-                      ) : (
-                        <FiPlus size={20} style={{ color: '#48b0ad' }} />
-                      )}
-                    </div>
+                    {category.icon}
+                    <span>{category.name}</span>
                   </button>
-                  
-                  <AnimatePresence>
-                    {openFAQ === faq.id && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <div className="px-6 pb-6 border-t border-gray-100">
-                          <div className="pt-4">
-                            <p className="text-base text-gray-600 leading-relaxed">
-                              {faq.answer}
-                            </p>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* FAQ Content */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="max-w-4xl mx-auto"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+            >
+              <motion.div variants={fadeInUp} className="text-center mb-16">
+                <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>
+                  {categories.find(c => c.id === activeCategory)?.name} Questions
+                </h2>
+                <p className="text-base text-gray-600">
+                  Click on any question to see the answer
+                </p>
+              </motion.div>
+
+              <div className="space-y-4">
+                {faqs[activeCategory as keyof typeof faqs].map((faq) => (
+                  <motion.div
+                    key={faq.id}
+                    variants={fadeInUp}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden"
+                  >
+                    <button
+                      onClick={() => toggleFAQ(faq.id)}
+                      className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                    >
+                      <h3 className="text-lg font-semibold pr-4" style={{ color: '#1c1c1c' }}>
+                        {faq.question}
+                      </h3>
+                      <div className="flex-shrink-0">
+                        {openFAQ === faq.id ? (
+                          <FiMinus size={20} style={{ color: '#cb338a' }} />
+                        ) : (
+                          <FiPlus size={20} style={{ color: '#48b0ad' }} />
+                        )}
+                      </div>
+                    </button>
+                    
+                    <AnimatePresence>
+                      {openFAQ === faq.id && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className="px-6 pb-6 border-t border-gray-100">
+                            <div className="pt-4">
+                              <p className="text-base text-gray-600 leading-relaxed">
+                                {faq.answer}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Still Have Questions Section */}
-      <section className="py-20" style={{ backgroundColor: '#eeeeee' }}>
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>
-                Still Have Questions?
+        {/* Still Have Questions Section */}
+        <section className="py-20" style={{ backgroundColor: '#eeeeee' }}>
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>
+                  Still Have Questions?
+                </h2>
+                <p className="text-base text-gray-600 mb-8">
+                  We&apos;re here to help! Reach out to us and we&apos;ll get back to you quickly.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                  <div className="mb-4 flex justify-center" style={{ color: '#48b0ad' }}>
+                    <FiMail size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1c1c1c' }}>Email Us</h3>
+                  <p className="text-base text-gray-600 mb-4">
+                    Get detailed answers to your questions
+                  </p>
+                  <a 
+                    href="mailto:hello@thefunproject.org"
+                    className="inline-block px-6 py-3 rounded-full font-semibold transition-all duration-300 text-base text-white"
+                    style={{ backgroundColor: '#48b0ad' }}
+                  >
+                    hello@thefunproject.org
+                  </a>
+                </div>
+
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                  <div className="mb-4 flex justify-center" style={{ color: '#cb338a' }}>
+                    <FiPhone size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1c1c1c' }}>Call Us</h3>
+                  <p className="text-base text-gray-600 mb-4">
+                    Speak directly with our team
+                  </p>
+                  <a 
+                    href="tel:+15551234567"
+                    className="inline-block px-6 py-3 rounded-full font-semibold transition-all duration-300 text-base text-white"
+                    style={{ backgroundColor: '#cb338a' }}
+                  >
+                    (555) 123-4567
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20" style={{ backgroundColor: '#e3cf12' }}>
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1c1c1c' }}>
+                Ready to Get Involved?
               </h2>
-              <p className="text-base text-gray-600 mb-8">
-                We&apos;re here to help! Reach out to us and we&apos;ll get back to you quickly.
+              <p className="text-base text-gray-700 mb-8">
+                Now that you know more about us, join our community and start making a difference today.
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="mb-4 flex justify-center" style={{ color: '#48b0ad' }}>
-                  <FiMail size={32} />
-                </div>
-                <h3 className="text-xl font-bold mb-2" style={{ color: '#1c1c1c' }}>Email Us</h3>
-                <p className="text-base text-gray-600 mb-4">
-                  Get detailed answers to your questions
-                </p>
-                <a 
-                  href="mailto:hello@thefunproject.org"
-                  className="inline-block px-6 py-3 rounded-full font-semibold transition-all duration-300 text-base text-white"
-                  style={{ backgroundColor: '#48b0ad' }}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.a
+                  href="/events"
+                  className="text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all duration-300 shadow-lg text-base"
+                  style={{ backgroundColor: '#1c1c1c' }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  hello@thefunproject.org
-                </a>
-              </div>
-
-              <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-                <div className="mb-4 flex justify-center" style={{ color: '#cb338a' }}>
-                  <FiPhone size={32} />
-                </div>
-                <h3 className="text-xl font-bold mb-2" style={{ color: '#1c1c1c' }}>Call Us</h3>
-                <p className="text-base text-gray-600 mb-4">
-                  Speak directly with our team
-                </p>
-                <a 
-                  href="tel:+15551234567"
-                  className="inline-block px-6 py-3 rounded-full font-semibold transition-all duration-300 text-base text-white"
-                  style={{ backgroundColor: '#cb338a' }}
+                  Join an Event
+                </motion.a>
+                <motion.a
+                  href="/volunteer"
+                  className="bg-white px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg text-base"
+                  style={{ color: '#1c1c1c' }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  (555) 123-4567
-                </a>
+                  Start Volunteering
+                </motion.a>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20" style={{ backgroundColor: '#e3cf12' }}>
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1c1c1c' }}>
-              Ready to Get Involved?
-            </h2>
-            <p className="text-base text-gray-700 mb-8">
-              Now that you know more about us, join our community and start making a difference today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
-                href="/events"
-                className="text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all duration-300 shadow-lg text-base"
-                style={{ backgroundColor: '#1c1c1c' }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Join an Event
-              </motion.a>
-              <motion.a
-                href="/volunteer"
-                className="bg-white px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg text-base"
-                style={{ color: '#1c1c1c' }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Start Volunteering
-              </motion.a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </PublicLayout>
   );
 };
 

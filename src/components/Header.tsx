@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiX, FiChevronDown, FiUser } from 'react-icons/fi';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -148,8 +148,30 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Donate Button */}
-          <div className="hidden lg:block">
+          {/* Action Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Admin Signin Button */}
+            <Link
+              href="/admin/login"
+              className="flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-300 text-sm border"
+              style={{ 
+                color: '#48b0ad', 
+                borderColor: '#48b0ad' 
+              }}
+              onMouseEnter={(e) => {
+                (e.target as HTMLElement).style.backgroundColor = '#48b0ad';
+                (e.target as HTMLElement).style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLElement).style.backgroundColor = 'transparent';
+                (e.target as HTMLElement).style.color = '#48b0ad';
+              }}
+            >
+              <FiUser size={16} />
+              <span>Admin Sign In</span>
+            </Link>
+
+            {/* Donate Button */}
             <Link
               href="/donate"
               className="px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-sm text-sm text-white"
@@ -228,7 +250,30 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-2">
+                
+                {/* Mobile Action Buttons */}
+                <div className="pt-4 space-y-3">
+                  <Link
+                    href="/admin/login"
+                    className="flex items-center justify-center space-x-2 px-6 py-2.5 rounded-full font-medium transition-all duration-300 shadow-sm text-center text-sm border"
+                    style={{ 
+                      color: '#48b0ad', 
+                      borderColor: '#48b0ad' 
+                    }}
+                    onClick={() => setIsOpen(false)}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLElement).style.backgroundColor = '#48b0ad';
+                      (e.target as HTMLElement).style.color = 'white';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLElement).style.backgroundColor = 'transparent';
+                      (e.target as HTMLElement).style.color = '#48b0ad';
+                    }}
+                  >
+                    <FiUser size={16} />
+                    <span>Admin Sign In</span>
+                  </Link>
+                  
                   <Link
                     href="/donate"
                     className="block px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-sm text-center text-sm text-white"
