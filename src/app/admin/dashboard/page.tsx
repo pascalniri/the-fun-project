@@ -18,15 +18,23 @@ const AdminDashboard = () => {
   const router = useRouter();
 
   useEffect(() => {
+    console.log('🏠 Dashboard useEffect triggered');
+    
     // Check authentication
     const token = localStorage.getItem('adminToken');
+    console.log('🔍 Checking for admin token...');
+    console.log('🎫 Token found:', token ? 'Yes' : 'No');
+    
     if (!token) {
+      console.log('❌ No token found, redirecting to login...');
       router.push('/admin/login');
       return;
     }
 
+    console.log('✅ Token found, setting user...');
     // Verify token (optional)
     setUser({ email: 'admin@thefunproject.org', role: 'admin' });
+    console.log('👤 User set successfully');
   }, [router]);
 
   // Sample data

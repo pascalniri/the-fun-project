@@ -19,6 +19,10 @@ const AdminLoginPage = () => {
     setIsLoading(true);
     setError('');
 
+    console.log('🔐 Login attempt started...');
+    console.log('📧 Email:', email);
+    console.log('🌐 API Endpoint:', API_ENDPOINTS.login);
+
     try {
       const response = await fetch(API_ENDPOINTS.login, {
         method: 'POST',
@@ -28,20 +32,38 @@ const AdminLoginPage = () => {
         body: JSON.stringify({ email, password })
       });
 
+      console.log('📡 Response status:', response.status);
+      console.log('📡 Response headers:', Object.fromEntries(response.headers.entries()));
+
       const data = await response.json();
+      console.log('📦 Response data:', data);
 
       if (data.success) {
+        console.log('✅ Login successful!');
+        console.log('🎫 Token received:', data.token ? 'Yes' : 'No');
+        
         // Store token in localStorage
         localStorage.setItem('adminToken', data.token);
+        console.log('💾 Token stored in localStorage');
+        
+        // Verify token was stored
+        const storedToken = localStorage.getItem('adminToken');
+        console.log('🔍 Token verification:', storedToken ? 'Found' : 'Not found');
+        
+        console.log('🧭 Attempting navigation to dashboard...');
         // Redirect to admin dashboard
         router.push('/admin/dashboard');
+        console.log('🧭 Navigation called');
       } else {
+        console.log('❌ Login failed:', data.message);
         setError(data.message || 'Login failed');
       }
-    } catch {
+    } catch (error) {
+      console.error('💥 Login error:', error);
       setError('Connection error. Please check if the backend server is running.');
     } finally {
       setIsLoading(false);
+      console.log('🏁 Login process completed');
     }
   };
 
