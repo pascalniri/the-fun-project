@@ -207,7 +207,7 @@ const HomePage = () => {
               <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 mb-8"></div>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                 Every event we host creates moments of joy and connection for individuals and families facing housing instability, 
-                providing mental wellness support when it's needed most.
+                providing mental wellness support when it&apos;s needed most.
             </p>
           </motion.div>
 

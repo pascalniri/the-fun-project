@@ -128,7 +128,7 @@ const AboutPage = () => {
                   <h2 className="text-4xl font-bold mb-6" style={{ color: '#1c1c1c' }}>Our Story</h2>
                   <div className="space-y-4">
                     <p className="text-base text-gray-600">
-                      The Fun Project was born from the founder's lived experience with housing instability. 
+                      The Fun Project was born from the founder&apos;s lived experience with housing instability. 
                       Having directly witnessed the challenges and emotional needs of individuals without stable housing, 
                       our founder recognized that while essential resources are important, so is mental wellness and joy.
                     </p>
@@ -138,8 +138,8 @@ const AboutPage = () => {
                       in people by staying calm, providing support, and helping them on their journey.
                     </p>
                     <p className="text-base text-gray-600">
-                      We believe that having fun isn't just a priority - it's core to one's well-being and mental health. 
-                      That's why The Fun Project is currently in the process of being formally established as a 501(c)(3) 
+                      We believe that having fun isn&apos;t just a priority - it&apos;s core to one&apos;s well-being and mental health. 
+                      That&apos;s why The Fun Project is currently in the process of being formally established as a 501(c)(3) 
                       nonprofit organization, focused on serving people facing housing instability in Washtenaw County.
                     </p>
                   </div>
