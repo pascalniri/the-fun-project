@@ -27,25 +27,9 @@ const Header = () => {
       items: [
         { href: '/about', label: 'About Us' },
         { href: '/who-we-serve', label: 'Who We Serve' },
-        { href: '/faq', label: 'FAQ' },
       ]
     },
-    {
-      label: 'Programs',
-      type: 'dropdown',
-      items: [
-        { href: '/programs', label: 'Our Programs' },
-        { href: '/events', label: 'Events' },
-      ]
-    },
-    {
-      label: 'Get Involved',
-      type: 'dropdown',
-      items: [
-        { href: '/volunteer', label: 'Volunteer' },
-        { href: '/blog', label: 'Blog' },
-      ]
-    },
+    { href: '/programs', label: 'Our Programs', type: 'link' },
     { href: '/contact', label: 'Contact', type: 'link' },
   ];
 
@@ -151,7 +135,7 @@ const Header = () => {
           {/* Action Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Admin Signin Button */}
-            <Link
+            {/* <Link
               href="/admin/login"
               className="flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-300 text-sm border"
               style={{ 
@@ -169,7 +153,7 @@ const Header = () => {
             >
               <FiUser size={16} />
               <span>Admin Sign In</span>
-            </Link>
+            </Link> */}
 
             {/* Donate Button */}
             <Link
@@ -253,7 +237,7 @@ const Header = () => {
                 
                 {/* Mobile Action Buttons */}
                 <div className="pt-4 space-y-3">
-                  <Link
+                  {/* <Link
                     href="/admin/login"
                     className="flex items-center justify-center space-x-2 px-6 py-2.5 rounded-full font-medium transition-all duration-300 shadow-sm text-center text-sm border"
                     style={{ 
@@ -272,7 +256,7 @@ const Header = () => {
                   >
                     <FiUser size={16} />
                     <span>Admin Sign In</span>
-                  </Link>
+                  </Link> */}
                   
                   <Link
                     href="/donate"

@@ -87,22 +87,22 @@ const ContactPage = () => {
       description: "We'll get back to you within 24 hours"
     },
     {
-      icon: <FiPhone className="w-6 h-6" />,
-      title: "Call Us",
-      content: "(555) 123-4567",
-      description: "Available Monday-Friday, 9 AM - 5 PM"
-    },
-    {
       icon: <FiMapPin className="w-6 h-6" />,
-      title: "Visit Us",
-      content: "123 Community Street",
-      description: "Joyville, CA 90210"
+      title: "Service Area",
+      content: "Washtenaw County, Michigan",
+      description: "Serving individuals and families without stable housing"
     },
     {
       icon: <FiClock className="w-6 h-6" />,
-      title: "Office Hours",
-      content: "Mon-Fri: 9 AM - 5 PM",
-      description: "Weekend events by appointment"
+      title: "Development Phase",
+      content: "Currently Building Partnerships",
+      description: "Preparing to launch our first events"
+    },
+    {
+      icon: <FiHeart className="w-6 h-6" />,
+      title: "Get Involved",
+      content: "Share Ideas & Feedback",
+      description: "Help us understand community needs"
     }
   ];
 
@@ -249,18 +249,16 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-24 bg-white">
+      {/* <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
-              {/* Form */}
               <motion.div
                 className="relative group"
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-3xl opacity-0 group-hover:opacity-10 transition-all duration-500 blur-xl scale-105"></div>
                 
                 <div className="relative backdrop-blur-sm bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
@@ -350,7 +348,6 @@ const ContactPage = () => {
                     />
                   </div>
 
-                      {/* Success/Error Messages */}
                       {submitMessage && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
@@ -400,7 +397,6 @@ const ContactPage = () => {
                 </div>
               </motion.div>
 
-              {/* Additional Info */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -442,28 +438,43 @@ const ContactPage = () => {
                       <div>
                         <h4 className="font-semibold mb-2 text-base" style={{ color: '#1c1c1c' }}>Ask Questions</h4>
                         <p className="text-base text-gray-600">
-                          Whether it&apos;s about our programs, events, or how to get involved - we&apos;re here to help.
+                          Questions about our programs, events, or how to participate? We&apos;re here to help.
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Quick Response Times */}
-                <div className="bg-white p-6 rounded-xl shadow-lg">
-                  <h4 className="font-semibold mb-4 text-center text-base" style={{ color: '#1c1c1c' }}>Response Times</h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">General Inquiries:</span>
-                      <span className="font-medium" style={{ color: '#48b0ad' }}>Within 24 hours</span>
+                <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-8 rounded-2xl shadow-lg">
+                  <h3 className="text-2xl font-bold mb-6">Join Our Community</h3>
+                  <p className="text-base opacity-90 mb-6 leading-relaxed">
+                    Be the first to know about upcoming events, volunteer opportunities, and ways to make an impact in your community.
+                  </p>
+                  <div className="flex space-x-4">
+                    <motion.button
+                      className="flex-1 bg-white text-emerald-700 py-3 px-6 rounded-xl font-semibold hover:bg-emerald-50 transition-all duration-300"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      Newsletter Signup
+                    </motion.button>
+                  </div>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-lg">
+                  <h3 className="text-2xl font-bold mb-6" style={{ color: '#1c1c1c' }}>Quick Facts</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                      <span className="text-gray-600">Response Time</span>
+                      <span className="font-semibold" style={{ color: '#1c1c1c' }}>Within 24 hours</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Volunteer Questions:</span>
-                      <span className="font-medium" style={{ color: '#cb338a' }}>Within 12 hours</span>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                      <span className="text-gray-600">Office Hours</span>
+                      <span className="font-semibold" style={{ color: '#1c1c1c' }}>Mon-Fri, 9 AM - 5 PM</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Event Information:</span>
-                      <span className="font-medium" style={{ color: '#e3cf12' }}>Same day</span>
+                    <div className="flex justify-between items-center py-2">
+                      <span className="text-gray-600">Location</span>
+                      <span className="font-semibold" style={{ color: '#1c1c1c' }}>Washtenaw County</span>
                     </div>
                   </div>
                 </div>
@@ -471,7 +482,7 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Map Section */}
       <section className="py-20" style={{ backgroundColor: '#eeeeee' }}>
@@ -484,9 +495,9 @@ const ContactPage = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>Find Us</h2>
+              <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>Our Service Area</h2>
               <p className="text-base text-gray-600">
-                We&apos;re located in the heart of the community we serve
+                We serve individuals and families facing housing instability throughout Washtenaw County, Michigan
               </p>
             </div>
             
@@ -494,9 +505,9 @@ const ContactPage = () => {
               <div className="h-64 md:h-96 bg-gray-200 flex items-center justify-center">
                 <div className="text-center">
                   <FiMapPin className="w-12 h-12 mx-auto mb-4" style={{ color: '#48b0ad' }} />
-                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1c1c1c' }}>Interactive Map Coming Soon</h3>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: '#1c1c1c' }}>Washtenaw County, Michigan</h3>
                   <p className="text-base text-gray-600">
-                    123 Community Street, Joyville, CA 90210
+                    Currently building partnerships with local organizations to serve our community
                   </p>
                 </div>
               </div>

@@ -33,10 +33,10 @@ const HomePage = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Lives Touched", icon: FiHeart },
-    { number: "150+", label: "Events Hosted", icon: FiStar },
-    { number: "50+", label: "Active Volunteers", icon: FiUsers },
-    { number: "95%", label: "Satisfaction Rate", icon: FiTrendingUp }
+    { number: "In Development", label: "Preparing to Launch", icon: FiHeart },
+    { number: "First Event", label: "Coming Soon", icon: FiStar },
+    { number: "Growing", label: "Volunteer Team", icon: FiUsers },
+    { number: "Washtenaw County", label: "Service Area", icon: FiTrendingUp }
   ];
 
   const nextSlide = useCallback(() => {
@@ -136,7 +136,7 @@ const HomePage = () => {
                 className="mb-8"
               >
                 <p className="text-2xl md:text-4xl font-light mb-6 text-white/90">
-                  Bringing Joy, Building Community
+                  Putting the Fun in a Moment of Crisis
                 </p>
                 <div className="w-32 h-1 mx-auto rounded-full bg-gradient-to-r from-yellow-400 to-orange-500"></div>
               </motion.div>
@@ -147,7 +147,7 @@ const HomePage = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed"
               >
-                Creating transformative experiences that unite communities through the power of joy, connection, and shared purpose.
+                Creating joyous experiences for individuals and families without stable housing through meaningful events that focus on mental wellness and uplifting experiences families can relish in together.
               </motion.p>
             </div>
           </motion.div>
@@ -159,7 +159,7 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <motion.div 
+            {/* <motion.div 
               whileHover={{ scale: 1.05, y: -2 }} 
               whileTap={{ scale: 0.95 }}
             >
@@ -171,19 +171,19 @@ const HomePage = () => {
                 <FiHeart size={22} className="relative z-10" />
                 <span className="relative z-10">Donate Now</span>
               </Link>
-            </motion.div>
+            </motion.div> */}
             
             <motion.div 
               whileHover={{ scale: 1.05, y: -2 }} 
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                href="/volunteer"
+                href="/contact"
                 className="group relative overflow-hidden px-12 py-5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-3 text-lg"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <FiUsers size={22} className="relative z-10" />
-                <span className="relative z-10">Join Our Mission</span>
+                <span className="relative z-10">Get in Touch</span>
               </Link>
             </motion.div>
           </motion.div>
@@ -206,7 +206,8 @@ const HomePage = () => {
             </h2>
               <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 mb-8"></div>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Every initiative we launch creates ripples of positive change that transform lives and strengthen our community bonds.
+                Every event we host creates moments of joy and connection for individuals and families facing housing instability, 
+                providing mental wellness support when it's needed most.
             </p>
           </motion.div>
 
@@ -367,8 +368,8 @@ const HomePage = () => {
               <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 mb-8"></div>
               
               <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-                Whether you want to volunteer your time, make a donation, or simply spread the word, 
-                there are countless ways to be part of our mission to bring joy to every corner of our community.
+                Help us create joyous experiences for individuals and families without stable housing. 
+                Your support enables us to provide mental wellness events, essential resources, and moments of happiness during challenging times.
               </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -377,12 +378,12 @@ const HomePage = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="/volunteer"
+                  href="/contact"
                     className="group relative overflow-hidden px-12 py-5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-3 text-lg"
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <FiUsers size={22} className="relative z-10" />
-                  <span className="relative z-10">Become a Volunteer</span>
+                  <span className="relative z-10">Get in Touch</span>
                 </Link>
               </motion.div>
                 
@@ -391,12 +392,12 @@ const HomePage = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                    href="/contact"
+                    href="/about"
                     className="group relative overflow-hidden px-12 py-5 bg-white border-2 border-slate-300 text-slate-800 font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-3 text-lg"
                 >
                     <div className="absolute inset-0 bg-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <FiArrowRight size={22} className="relative z-10" />
-                    <span className="relative z-10">Get in Touch</span>
+                    <span className="relative z-10">Learn More</span>
                 </Link>
               </motion.div>
             </div>

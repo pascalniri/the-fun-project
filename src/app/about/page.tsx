@@ -45,24 +45,24 @@ const AboutPage = () => {
 
   const timeline = [
     {
-      year: "2023",
-      title: "The Idea",
-      description: "The Fun Project was conceived as a way to bring more joy and connection to our community."
+      year: "Founder's Experience",
+      title: "Personal Journey",
+      description: "Our founder's lived experience with housing instability revealed the crucial need for mental wellness support during crisis moments."
     },
     {
       year: "2024",
-      title: "501(c)(3) Application",
-      description: "We filed our application for nonprofit status to formalize our mission and expand our impact."
+      title: "Vision Development",
+      description: "The Fun Project concept was developed, focusing on putting fun in moments of crisis through joyous experiences for those without stable housing."
     },
     {
-      year: "2024",
+      year: "Current",
+      title: "Building Foundation",
+      description: "Conducting customer discovery, building partnerships with organizations in Washtenaw County, and preparing for 501(c)(3) nonprofit status."
+    },
+    {
+      year: "Near Future",
       title: "First Events",
-      description: "Launched our first community events and volunteer programs with overwhelming positive response."
-    },
-    {
-      year: "Future",
-      title: "Growing Impact",
-      description: "Expanding our programs and reaching more communities in need of joy and connection."
+      description: "Planning to host our first mental health-focused events once key partnerships and funding are secured."
     }
   ];
 
@@ -120,7 +120,7 @@ const AboutPage = () => {
                       />
                     </div>
                     <h3 className="text-2xl font-bold mb-2" style={{ color: '#1c1c1c' }}>Meet Our Founder</h3>
-                    <p className="text-base text-gray-600">Passionate about community building</p>
+                    <p className="text-base text-gray-600">Leading with lived experience and compassion</p>
                   </div>
                 </motion.div>
                 
@@ -128,18 +128,19 @@ const AboutPage = () => {
                   <h2 className="text-4xl font-bold mb-6" style={{ color: '#1c1c1c' }}>Our Story</h2>
                   <div className="space-y-4">
                     <p className="text-base text-gray-600">
-                      The Fun Project was born from a simple observation: our communities needed more joy, 
-                      connection, and opportunities to come together in meaningful ways.
+                      The Fun Project was born from the founder's lived experience with housing instability. 
+                      Having directly witnessed the challenges and emotional needs of individuals without stable housing, 
+                      our founder recognized that while essential resources are important, so is mental wellness and joy.
                     </p>
                     <p className="text-base text-gray-600">
-                      What started as informal gatherings among friends has grown into a mission to create 
-                      lasting positive impact through fun, engaging activities that bring people together 
-                      and support those in need.
+                      Through personal journey and over 23 years of customer service experience across various industries, 
+                      our founder developed strong organizational and leadership skills, learning how to bring out the best 
+                      in people by staying calm, providing support, and helping them on their journey.
                     </p>
                     <p className="text-base text-gray-600">
-                      As a 501(c)(3) pending nonprofit organization, we&apos;re committed to transparency, 
-                      community involvement, and making every dollar count toward our mission of 
-                      spreading joy and building stronger communities.
+                      We believe that having fun isn't just a priority - it's core to one's well-being and mental health. 
+                      That's why The Fun Project is currently in the process of being formally established as a 501(c)(3) 
+                      nonprofit organization, focused on serving people facing housing instability in Washtenaw County.
                     </p>
                   </div>
                 </motion.div>
@@ -173,9 +174,8 @@ const AboutPage = () => {
                 >
                   <h3 className="text-3xl font-bold mb-6">Our Mission</h3>
                   <p className="text-base opacity-90">
-                    To bring joy and build community through fun, inclusive activities and events 
-                    that connect people, support those in need, and create lasting positive impact 
-                    in our neighborhoods and beyond.
+                    The Fun Project puts the fun in a moment of crisis by creating joyous experiences for 
+                    individuals and families without stable housing.
                   </p>
                 </motion.div>
 
@@ -186,9 +186,9 @@ const AboutPage = () => {
                 >
                   <h3 className="text-3xl font-bold mb-6">Our Vision</h3>
                   <p className="text-base opacity-90">
-                    A world where every community has access to joy, connection, and support - 
-                    where neighbors know each other, where fun brings people together, and where 
-                    everyone feels valued and included.
+                    The Fun Project is committed to partnering with organizations in Washtenaw County to provide 
+                    those without stable housing with meaningful events that focus on mental wellness through 
+                    enjoyable and uplifting experiences that families can relish in together.
                   </p>
                 </motion.div>
               </div>
@@ -293,22 +293,22 @@ const AboutPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a
-                  href="/volunteer"
+                  href="/contact"
                   className="text-white px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl text-base"
                   style={{ backgroundColor: '#1c1c1c' }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Volunteer With Us
+                  Get in Touch
                 </motion.a>
                 <motion.a
-                  href="/donate"
+                  href="/programs"
                   className="bg-white px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl text-base"
                   style={{ color: '#1c1c1c' }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Support Our Work
+                  Our Programs
                 </motion.a>
               </div>
             </motion.div>

@@ -10,112 +10,111 @@ const ProgramsPage = () => {
 
   const programCategories = [
     { id: 'all', name: 'All Programs' },
-    { id: 'seniors', name: 'Senior Programs' },
     { id: 'families', name: 'Family Programs' },
-    { id: 'community', name: 'Community Building' },
+    { id: 'community', name: 'Mental Health & Wellness' },
     { id: 'seasonal', name: 'Seasonal Events' }
   ];
 
   const programs = [
     {
       id: 1,
-      title: "Senior Social Hours",
-      category: "seniors",
-      description: "Weekly gatherings for our senior community members featuring coffee, conversation, games, and friendship.",
-      schedule: "Every Wednesday, 2:00 PM - 4:00 PM",
-      location: "Senior Community Center",
-      participants: "15-25 seniors",
-      image: "☕",
+      title: "Mental Health & Wellness Events",
+      category: "families",
+      description: "Comprehensive events combining essential resource distribution with mental health-focused activities designed to reduce stress and encourage emotional well-being.",
+      schedule: "Monthly events (frequency will increase as we grow)",
+      location: "Various community locations in Washtenaw County",
+      participants: "Individuals and families without stable housing",
+      image: "🧠",
       benefits: [
-        "Combat social isolation",
-        "Build lasting friendships", 
-        "Mental stimulation through activities",
-        "Health and wellness check-ins"
+        "Mental health break through structured activities",
+        "Essential resource distribution (meals, care packages)",
+        "Emotional relief and community connection",
+        "Safe, welcoming space for relaxation and bonding"
       ],
       featured: true
     },
     {
       id: 2,
-      title: "Family Game Nights",
-      category: "families",
-      description: "Monthly board game and card game evenings bringing families together for fun and connection.",
-      schedule: "First Friday of each month, 6:00 PM - 8:00 PM",
-      location: "Community Recreation Center",
-      participants: "20-30 families",
-      image: "🎲",
+      title: "Group Art Therapy Sessions",
+      category: "community",
+      description: "Creative expression sessions that provide therapeutic benefits while fostering community connection and stress relief.",
+      schedule: "Integrated into monthly events",
+      location: "Community centers and partner locations",
+      participants: "All ages welcome",
+      image: "🎨",
       benefits: [
-        "Screen-free family time",
-        "Meet other families in the area",
-        "Learn new games",
-        "Build problem-solving skills"
+        "Creative outlet for emotional expression",
+        "Therapeutic stress relief",
+        "Build confidence and self-esteem",
+        "Create lasting memories and artwork"
       ],
       featured: true
     },
     {
       id: 3,
-      title: "Community Clean-Up Days",
-      category: "community",
-      description: "Monthly volunteer events to beautify our neighborhood parks, streets, and public spaces.",
-      schedule: "Third Saturday of each month, 9:00 AM - 12:00 PM",
-      location: "Various neighborhood locations",
-      participants: "30-50 volunteers",
-      image: "🌱",
+      title: "Outdoor Activities & Nature Programs",
+      category: "families",
+      description: "Outdoor experiences including zoo visits, nature walks, and recreational activities that provide fresh air, exercise, and mental wellness benefits.",
+      schedule: "Seasonal programming based on weather",
+      location: "Local parks, zoo, and outdoor venues",
+      participants: "Families and individuals of all ages",
+      image: "🌳",
       benefits: [
-        "Improve community appearance",
-        "Environmental stewardship",
-        "Meet engaged neighbors",
-        "Sense of civic pride"
-      ],
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Holiday Celebrations",
-      category: "seasonal",
-      description: "Special events throughout the year celebrating holidays and bringing the community together.",
-      schedule: "Various times throughout the year",
-      location: "Community Center or Parks",
-      participants: "50-200 attendees",
-      image: "🎉",
-      benefits: [
-        "Celebrate together as a community",
-        "Cultural exchange and learning",
-        "Create lasting memories",
-        "Include all community members"
+        "Physical activity and fresh air",
+        "Connection with nature for mental wellness",
+        "Family bonding opportunities",
+        "New experiences and learning"
       ],
       featured: true
     },
     {
-      id: 5,
-      title: "Youth Mentorship Program",
-      category: "community",
-      description: "Connecting experienced community members with young people for guidance and support.",
-      schedule: "Ongoing, flexible scheduling",
-      location: "Various locations",
-      participants: "10-15 mentor-mentee pairs",
-      image: "🤝",
+      id: 4,
+      title: "Care Package Distribution",
+      category: "all",
+      description: "Essential resource packages including hygiene kits, clothing, outerwear, and educational materials distributed at every event.",
+      schedule: "Available at all events",
+      location: "All event locations",
+      participants: "Every attendee receives care packages",
+      image: "📦",
       benefits: [
-        "Positive role models for youth",
-        "Intergenerational connections",
-        "Personal development",
-        "Community investment"
+        "Hygiene kits and personal care items",
+        "Clothing and weather-appropriate outerwear",
+        "Educational materials and resources",
+        "Practical support for daily needs"
+      ],
+      featured: false
+    },
+    {
+      id: 5,
+      title: "Guided Relaxation & Mindfulness",
+      category: "community",
+      description: "Structured relaxation exercises and mindfulness activities designed to help participants manage stress and focus on mental wellness.",
+      schedule: "Integrated into all major events",
+      location: "Quiet spaces at event venues",
+      participants: "Adults and older children",
+      image: "🧘",
+      benefits: [
+        "Stress reduction techniques",
+        "Mindfulness and grounding exercises",
+        "Coping strategies for difficult times",
+        "Inner peace and emotional balance"
       ],
       featured: false
     },
     {
       id: 6,
-      title: "Neighborhood Potluck Dinners",
+      title: "Interactive Play Sessions",
       category: "families",
-      description: "Casual monthly dinners where neighbors bring dishes to share and get to know each other.",
-      schedule: "Second Sunday of each month, 5:00 PM - 7:00 PM",
-      location: "Rotating neighborhood locations",
-      participants: "25-40 neighbors",
-      image: "🍽️",
+      description: "Fun, engaging activities specifically designed for children and parents to play together, creating joy and strengthening family bonds.",
+      schedule: "Part of every family-focused event",
+      location: "Child-friendly spaces at venues",
+      participants: "Children and their parents/caregivers",
+      image: "🎪",
       benefits: [
-        "Share diverse foods and cultures",
-        "Build neighborhood connections",
-        "Low-cost social activity",
-        "Strengthen community bonds"
+        "Quality parent-child bonding time",
+        "Age-appropriate fun and learning",
+        "Social interaction with other families",
+        "Temporary escape from stressful situations"
       ],
       featured: false
     }
@@ -162,11 +161,12 @@ const ProgramsPage = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Our Programs
+                Our Programs & Services
               </h1>
               <p className="text-base opacity-90">
-                Discover the variety of programs and activities we offer to bring joy, 
-                connection, and support to every member of our community.
+                Mental health-focused events and activities designed for individuals and families 
+                facing housing instability. Each event combines essential resources with opportunities 
+                for stress relief through engaging, fun experiences.
               </p>
             </motion.div>
           </div>
@@ -345,13 +345,13 @@ const ProgramsPage = () => {
                   Contact Us
                 </motion.a>
                 <motion.a
-                  href="/volunteer"
+                  href="/about"
                   className="bg-white px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg text-base"
                   style={{ color: '#1c1c1c' }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Volunteer with Us
+                  Learn About Us
                 </motion.a>
               </div>
             </motion.div>

@@ -8,6 +8,7 @@ import {
   FiShield, 
   FiTrendingUp
 } from 'react-icons/fi';
+import PublicLayout from '../../components/PublicLayout';
 
 const WhoWeServePage = () => {
   const [activeStory, setActiveStory] = useState<number | null>(null);
@@ -15,43 +16,43 @@ const WhoWeServePage = () => {
   const communityGroups = [
     {
       id: 1,
-      title: "Senior Community Members",
-      description: "Providing social connection and support for our older adults through weekly gatherings and activities.",
-      programs: ["Senior Social Hours", "Health & Wellness Checks", "Transportation Assistance", "Intergenerational Programs"],
-      impact: "Fighting isolation and promoting healthy aging",
-      image: "👵",
-      participants: "25+ active seniors",
+      title: "Individuals Without Stable Housing",
+      description: "Supporting adults experiencing housing instability through mental health-focused events that provide essential resources and emotional relief.",
+      programs: ["Mental Health & Wellness Events", "Care Package Distribution", "Guided Relaxation & Mindfulness", "Essential Resource Access"],
+      impact: "Providing mental wellness support during crisis",
+      image: "🤝",
+      participants: "Primary focus group",
       featured: true
     },
     {
       id: 2,
-      title: "Families with Children",
-      description: "Creating opportunities for families to connect, play, and build lasting relationships with their neighbors.",
-      programs: ["Family Game Nights", "Outdoor Activities", "Educational Workshops", "Holiday Celebrations"],
-      impact: "Strengthening family bonds and community connections",
+      title: "Families Without Stable Housing",
+      description: "Creating joyous experiences for families facing housing challenges, focusing on children and parents enjoying uplifting activities together.",
+      programs: ["Family-Focused Events", "Interactive Play Sessions", "Group Art Therapy", "Care Package Distribution"],
+      impact: "Strengthening family bonds during difficult times",
       image: "👨‍👩‍👧‍👦",
-      participants: "30+ families",
+      participants: "Families with children",
       featured: true
     },
     {
       id: 3,
-      title: "Young Adults & Professionals",
-      description: "Helping young adults build community connections and develop leadership skills through meaningful volunteer opportunities.",
-      programs: ["Community Service Projects", "Networking Events", "Skill-Building Workshops", "Mentorship Programs"],
-      impact: "Developing future community leaders",
-      image: "👩‍💼",
-      participants: "15+ young adults",
-      featured: false
+      title: "Children in Housing-Unstable Families",
+      description: "Providing safe, fun environments where children can play, learn, and experience joy despite challenging circumstances.",
+      programs: ["Interactive Play Sessions", "Group Art Therapy", "Outdoor Activities", "Age-Appropriate Programming"],
+      impact: "Creating positive memories and emotional support",
+      image: "👶",
+      participants: "Children of all ages",
+      featured: true
     },
     {
       id: 4,
-      title: "Isolated Community Members",
-      description: "Reaching out to those who may feel disconnected and providing pathways to community involvement.",
-      programs: ["Outreach Visits", "Welcome Programs", "Buddy System", "Inclusive Activities"],
-      impact: "Ensuring no one feels left behind",
-      image: "🤝",
-      participants: "Ongoing outreach",
-      featured: true
+      title: "Partnering Organizations",
+      description: "Collaborating with organizations in Washtenaw County that serve people experiencing housing instability to expand our reach and impact.",
+      programs: ["Event Partnerships", "Resource Sharing", "Collaborative Programming", "Community Outreach"],
+      impact: "Amplifying services through strategic partnerships",
+      image: "🏢",
+      participants: "Community partners",
+      featured: false
     }
   ];
 
@@ -104,6 +105,7 @@ const WhoWeServePage = () => {
   };
 
   return (
+    <PublicLayout>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative text-white py-20 overflow-hidden">
@@ -128,8 +130,8 @@ const WhoWeServePage = () => {
               Who We Serve
             </h1>
             <p className="text-base opacity-90">
-              Our programs are designed to serve every member of our community, 
-              from children to seniors, ensuring everyone has access to joy, connection, and support.
+              The Fun Project serves individuals and families without stable housing in Washtenaw County, 
+              providing mental wellness support through joyous experiences during moments of crisis.
             </p>
           </motion.div>
         </div>
@@ -147,10 +149,10 @@ const WhoWeServePage = () => {
           >
             <motion.div variants={fadeInUp} className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>
-                Our Community Groups
+                Our Community Focus
               </h2>
               <p className="text-base text-gray-600 max-w-3xl mx-auto">
-                We proudly serve diverse groups within our community, each with unique needs and contributions
+                We focus specifically on serving those facing housing instability, understanding their unique needs and challenges
               </p>
             </motion.div>
 
@@ -445,6 +447,7 @@ const WhoWeServePage = () => {
         </div>
       </section>
     </div>
+    </PublicLayout>
   );
 };
 
