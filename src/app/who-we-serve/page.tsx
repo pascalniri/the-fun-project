@@ -235,9 +235,11 @@ const WhoWeServePage = () => {
             <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">
               Growing Our Impact
             </h2>
-            <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              While we're currently focused on serving Washtenaw County, our vision extends beyond our initial
-              service area. We're working to:
+            <p className="text-lg text-gray-700 mb-8">
+              We&apos;re committed to serving families in Washtenaw County who are experiencing housing instability. Our programs are designed to support both parents and children, helping them navigate challenging times while maintaining their mental well-being.
+            </p>
+            <p className="text-lg text-gray-700">
+              Through our community partnerships and dedicated volunteers, we&apos;re building a network of support that extends beyond our events, creating lasting connections and resources for those we serve.
             </p>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">

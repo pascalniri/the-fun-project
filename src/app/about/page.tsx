@@ -151,17 +151,10 @@ const AboutPage = () => {
                   direct insight into the mental, emotional, and practical needs of the individuals we aim to serve.
                 </p>
                 <p className="text-slate-700 leading-relaxed mb-6">
-                  Through my journey, I've witnessed how having fun isn't a priority but it's core to one's
-                  well-being and mental health. Due to my experiences being without a home, I've been able to
-                  develop strong organizational and leadership skills, including the ability to coordinate
-                  community activities on a tight budget, foster relationships, and build a sense of trust among
-                  those I serve.
+                  I&apos;ve witnessed firsthand how housing instability affects families&apos; mental well-being. Through The Fun Project, we&apos;re creating moments of joy and connection for those who need it most.
                 </p>
                 <p className="text-slate-700 leading-relaxed">
-                  With over 23 years of customer service experience, I bring a unique perspective to The Fun Project.
-                  My approach to helping families is rooted in respect, support, and understanding - helping them
-                  have fun while being able to take some time out of their challenging situation so that they can
-                  move forward.
+                  Our mission is to provide mental wellness support through engaging activities and events, helping families build resilience and find joy even in challenging times.
                 </p>
               </div>
             </motion.div>
