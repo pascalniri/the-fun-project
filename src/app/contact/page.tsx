@@ -15,7 +15,7 @@ const ContactPage = () => {
     {
       icon: <FiMail className="w-6 h-6" />,
       title: "Email Us",
-      content: "hello@thefunproject.org",
+      content: "thefunproject734@gmail.com",
       description: "We'll get back to you within 24 hours"
     },
     {
