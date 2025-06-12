@@ -117,7 +117,7 @@ const HomePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <span className="text-[#FF6B6B]">The Fun</span>{' '}
+                <span className="bg-gradient-to-r from-[#FF6B6B] to-[#e3cf12] bg-clip-text text-transparent">The Fun</span>{' '}
                 <span className="text-[#4ECDC4]">Project</span>
               </motion.h1>
               

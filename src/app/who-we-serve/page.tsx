@@ -213,8 +213,8 @@ const WhoWeServePage = () => {
                 welcoming space for relaxation and bonding in an otherwise stressful time.
               </p>
               <p className="text-slate-700 leading-relaxed">
-                We understand that having fun isn't just a luxury - it's essential for mental well-being. That's why
-                we're committed to creating experiences that address both practical needs and emotional support,
+                We understand that having fun isn&apos;t just a luxury - it&apos;s essential for mental well-being. That&apos;s why
+                we&apos;re committed to creating experiences that address both practical needs and emotional support,
                 helping families move forward with renewed hope and strength.
               </p>
             </div>

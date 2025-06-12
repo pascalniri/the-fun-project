@@ -141,7 +141,7 @@ const AboutPage = () => {
             >
               <h2 className="text-4xl font-bold mb-12 text-center">
                 <span className="bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                  Founder's Story
+                  Founder&apos;s Story
                 </span>
               </h2>
               <div className="prose prose-lg mx-auto">
