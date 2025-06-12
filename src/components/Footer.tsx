@@ -82,9 +82,10 @@ const Footer = () => {
                     <FiPhone className="text-white" size={16} />
                   </div>
                   <span className="text-base text-gray-300">
-                    (555) 123-4567
-                  </span>
-                </div>
+                    734-478-5852
+                  </span> 
+                </div> 
+
                 
                 <div className="flex items-center space-x-3">
                   <div 
@@ -94,7 +95,7 @@ const Footer = () => {
                     <FiMail className="text-white" size={16} />
                   </div>
                   <span className="text-base text-gray-300">
-                    hello@thefunproject.org
+                  thefunproject734@gmail.com
                   </span>
                 </div>
               </div>
@@ -183,7 +184,7 @@ const Footer = () => {
               </ul>
 
               {/* Newsletter Signup */}
-              <div className="bg-white/5 rounded-lg p-4">
+              {/* <div className="bg-white/5 rounded-lg p-4">
                 <h5 className="text-lg font-bold mb-3 text-white">Stay Updated</h5>
                 <div className="space-y-3">
                   <input
@@ -204,7 +205,7 @@ const Footer = () => {
                     Subscribe
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
@@ -223,9 +224,9 @@ const Footer = () => {
                 <p className="text-base text-gray-300 font-medium">
                   © {currentYear} The Fun Project. All rights reserved.
                 </p>
-                <p className="text-sm text-gray-400 mt-1">
+                {/* <p className="text-sm text-gray-400 mt-1">
                   501(c)(3) Status Pending | Fiscal Sponsor: [Sponsor Name]
-                </p>
+                </p> */}
               </div>
               
               <div className="flex items-center space-x-2 text-base text-gray-300">

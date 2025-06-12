@@ -68,130 +68,129 @@ const AboutPage = () => {
 
   return (
     <PublicLayout>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
         {/* Hero Section */}
-        <section className="relative text-white py-20 overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <div 
-              className="w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2049&q=80')`
-              }}
-            />
-            <div className="absolute inset-0" style={{ backgroundColor: 'rgba(72, 176, 173, 0.8)' }}></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="relative py-24 bg-gradient-to-br from-slate-800 to-slate-900">
+          <div className="container mx-auto px-4">
             <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                About The Fun Project
+              <h1 className="text-5xl md:text-6xl font-black mb-6">
+                <span className="text-white">About</span>{' '}
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">The Fun Project</span>
               </h1>
-              <p className="text-base opacity-90">
-                Bringing joy, building community, and making a difference one smile at a time.
-              </p>
+              <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-pink-400 to-rose-500 mb-8"></div>
             </motion.div>
           </div>
         </section>
 
-        {/* Founder Section */}
-        <section className="py-20" style={{ backgroundColor: '#eeeeee' }}>
+        {/* Mission & Vision Section */}
+        <section className="py-24">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="max-w-6xl mx-auto"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <motion.div variants={fadeInUp}>
-                  <div className="bg-white rounded-2xl p-8 text-center shadow-md">
-                    <div className="w-48 h-48 bg-gray-100 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
-                      <div 
-                        className="w-full h-full bg-cover bg-center bg-no-repeat"
-                        style={{
-                          backgroundImage: `url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80')`
-                        }}
-                      />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2" style={{ color: '#1c1c1c' }}>Meet Our Founder</h3>
-                    <p className="text-base text-gray-600">Leading with lived experience and compassion</p>
-                  </div>
-                </motion.div>
-                
-                <motion.div variants={fadeInUp}>
-                  <h2 className="text-4xl font-bold mb-6" style={{ color: '#1c1c1c' }}>Our Story</h2>
-                  <div className="space-y-4">
-                    <p className="text-base text-gray-600">
-                      The Fun Project was born from the founder&apos;s lived experience with housing instability. 
-                      Having directly witnessed the challenges and emotional needs of individuals without stable housing, 
-                      our founder recognized that while essential resources are important, so is mental wellness and joy.
-                    </p>
-                    <p className="text-base text-gray-600">
-                      Through personal journey and over 23 years of customer service experience across various industries, 
-                      our founder developed strong organizational and leadership skills, learning how to bring out the best 
-                      in people by staying calm, providing support, and helping them on their journey.
-                    </p>
-                    <p className="text-base text-gray-600">
-                      We believe that having fun isn&apos;t just a priority - it&apos;s core to one&apos;s well-being and mental health. 
-                      That&apos;s why The Fun Project is currently in the process of being formally established as a 501(c)(3) 
-                      nonprofit organization, focused on serving people facing housing instability in Washtenaw County.
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Mission & Vision */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="max-w-6xl mx-auto"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <motion.div variants={fadeInUp} className="text-center mb-16">
-                <h2 className="text-4xl font-bold mb-4" style={{ color: '#1c1c1c' }}>Mission & Vision</h2>
-                <p className="text-base text-gray-600 max-w-3xl mx-auto">
-                  Our guiding principles that drive everything we do
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {/* Mission Statement */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl p-8 shadow-xl"
+              >
+                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">
+                  Our Mission
+                </h2>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  The Fun Project puts the fun in a moment of crisis by creating joyous experiences for
+                  individuals and families without stable housing.
                 </p>
               </motion.div>
 
-              <div className="grid md:grid-cols-2 gap-12">
-                <motion.div
-                  variants={fadeInUp}
-                  className="text-white p-8 rounded-2xl"
-                  style={{ backgroundColor: '#48b0ad' }}
-                >
-                  <h3 className="text-3xl font-bold mb-6">Our Mission</h3>
-                  <p className="text-base opacity-90">
-                    The Fun Project puts the fun in a moment of crisis by creating joyous experiences for 
-                    individuals and families without stable housing.
-                  </p>
-                </motion.div>
+              {/* Vision Statement */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl p-8 shadow-xl"
+              >
+                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">
+                  Our Vision
+                </h2>
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  The Fun Project is committed to partnering with organizations in Washtenaw County to provide
+                  those without stable housing with meaningful events that focus on mental wellness through
+                  enjoyable and uplifting experiences that families can relish in together.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
-                <motion.div
-                  variants={fadeInUp}
-                  className="text-white p-8 rounded-2xl"
-                  style={{ backgroundColor: '#cb338a' }}
-                >
-                  <h3 className="text-3xl font-bold mb-6">Our Vision</h3>
-                  <p className="text-base opacity-90">
-                    The Fun Project is committed to partnering with organizations in Washtenaw County to provide 
-                    those without stable housing with meaningful events that focus on mental wellness through 
-                    enjoyable and uplifting experiences that families can relish in together.
-                  </p>
-                </motion.div>
+        {/* Founder's Story Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-12 text-center">
+                <span className="bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+                  Founder's Story
+                </span>
+              </h2>
+              <div className="prose prose-lg mx-auto">
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  As the founder of The Fun Project, I have a clear understanding of the challenges faced by those
+                  experiencing housing instability. My lived experience in similar circumstances has given me
+                  direct insight into the mental, emotional, and practical needs of the individuals we aim to serve.
+                </p>
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  Through my journey, I've witnessed how having fun isn't a priority but it's core to one's
+                  well-being and mental health. Due to my experiences being without a home, I've been able to
+                  develop strong organizational and leadership skills, including the ability to coordinate
+                  community activities on a tight budget, foster relationships, and build a sense of trust among
+                  those I serve.
+                </p>
+                <p className="text-slate-700 leading-relaxed">
+                  With over 23 years of customer service experience, I bring a unique perspective to The Fun Project.
+                  My approach to helping families is rooted in respect, support, and understanding - helping them
+                  have fun while being able to take some time out of their challenging situation so that they can
+                  move forward.
+                </p>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Current Status Section */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-xl"
+            >
+              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">
+                Where We Are Now
+              </h2>
+              <p className="text-lg text-slate-700 leading-relaxed mb-6">
+                The Fun Project is currently in the process of being formally established as a non-profit organization.
+                While not yet fully operational, significant efforts are underway to launch its programs and services
+                in the near future.
+              </p>
+              <p className="text-lg text-slate-700 leading-relaxed">
+                Our initial focus includes building partnerships, securing necessary resources, and building the
+                foundation to begin serving people facing housing instability in Washtenaw County through fun and
+                exciting events focusing on mental health in the most amusing and entertaining capacity possible.
+              </p>
             </motion.div>
           </div>
         </section>

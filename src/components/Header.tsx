@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiX, FiChevronDown, FiHeart } from 'react-icons/fi';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -156,19 +156,19 @@ const Header = () => {
             </Link> */}
 
             {/* Donate Button */}
-            <Link
-              href="/donate"
-              className="px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-sm text-sm text-white"
-              style={{ backgroundColor: '#e3cf12' }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = '#cb338a';
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = '#e3cf12';
-              }}
+            <motion.div 
+              whileHover={{ scale: 1.05, y: -2 }} 
+              whileTap={{ scale: 0.95 }}
             >
-              Donate
-            </Link>
+              <Link
+                href="/donate"
+                className="group relative overflow-hidden px-8 py-3 bg-[#4ECDC4] text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2 text-sm"
+              >
+                <div className="absolute inset-0 bg-[#45B7AF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <FiHeart size={16} className="relative z-10" />
+                <span className="relative z-10">Donate</span>
+              </Link>
+            </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -258,20 +258,20 @@ const Header = () => {
                     <span>Admin Sign In</span>
                   </Link> */}
                   
-                  <Link
-                    href="/donate"
-                    className="block px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-sm text-center text-sm text-white"
-                    style={{ backgroundColor: '#e3cf12' }}
-                    onClick={() => setIsOpen(false)}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = '#cb338a';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.backgroundColor = '#e3cf12';
-                    }}
+                  <motion.div 
+                    whileHover={{ scale: 1.05, y: -2 }} 
+                    whileTap={{ scale: 0.95 }}
                   >
-                    Donate
-                  </Link>
+                    <Link
+                      href="/donate"
+                      className="group relative overflow-hidden px-8 py-3 bg-[#4ECDC4] text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="absolute inset-0 bg-[#45B7AF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <FiHeart size={16} className="relative z-10" />
+                      <span className="relative z-10">Donate</span>
+                    </Link>
+                  </motion.div>
                 </div>
               </nav>
             </motion.div>
