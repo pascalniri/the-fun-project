@@ -27,9 +27,34 @@ const Header = () => {
       items: [
         { href: '/about', label: 'About Us' },
         { href: '/who-we-serve', label: 'Who We Serve' },
+        { href: '/our-approach', label: 'Our Approach' },
       ]
     },
-    { href: '/programs', label: 'Our Programs', type: 'link' },
+    {
+      label: 'Programs & Impact',
+      type: 'dropdown',
+      items: [
+        { href: '/programs', label: 'Our Programs' },
+        { href: '/impact', label: 'Impact & Stories' },
+      ]
+    },
+    {
+      label: 'Community',
+      type: 'dropdown',
+      items: [
+        { href: '/partners', label: 'Community Partners' },
+        { href: '/resources', label: 'Resources & Support' },
+      ]
+    },
+    {
+      label: 'Get Involved',
+      type: 'dropdown',
+      items: [
+        { href: '/volunteer', label: 'Volunteer' },
+        { href: '/newsletter', label: 'Newsletter' },
+        { href: '/donate', label: 'Donate' },
+      ]
+    },
     { href: '/contact', label: 'Contact', type: 'link' },
   ];
 
